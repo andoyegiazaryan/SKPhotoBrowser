@@ -36,8 +36,8 @@ class SKButton: UIButton {
         let image = UIImage(named: "SKPhotoBrowser.bundle/images/\(imageName)", in: bundle, compatibleWith: nil) ?? UIImage()
         setImage(image, for: .normal)
         imageView?.contentMode = .scaleAspectFill
-        button.contentHorizontalAlignment = .fill
-        button.contentVerticalAlignment = .fill
+        contentHorizontalAlignment = .fill
+        contentVerticalAlignment = .fill
     }
   
     func setFrameSize(_ size: CGSize? = nil) {
