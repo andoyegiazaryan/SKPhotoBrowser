@@ -34,9 +34,10 @@ class SKButton: UIButton {
         autoresizingMask = [.flexibleBottomMargin, .flexibleLeftMargin, .flexibleRightMargin, .flexibleTopMargin]
         
         let image = UIImage(named: "SKPhotoBrowser.bundle/images/\(imageName)", in: bundle, compatibleWith: nil) ?? UIImage()
-        let imageView = UIImageView(image: image)
-        imageView.contentMode = .scaleAspectFill
-        addSubview(imageView)
+        setImage(image, for: .normal)
+        imageView?.contentMode = .scaleAspectFill
+        button.contentHorizontalAlignment = .fill
+        button.contentVerticalAlignment = .fill
     }
   
     func setFrameSize(_ size: CGSize? = nil) {
